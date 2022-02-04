@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Rubik:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Material+Icons+Outlined");
+@import url("https://fonts.googleapis.com/css2?family=Material+Icons");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Rubik', sans-serif;
+    background-color: hsl(228, 33%, 97%);
+}
+.container{
+    margin: 20px 300px;
+    overflow-y: scroll;
+    height: 80vh;
+}
+.container::-webkit-scrollbar{
+    width: 5px;
+    margin-top: 10px;
+    opacity: 0.1;
+}
+.container::-webkit-scrollbar-track{
+    background-color: hsl(239, 57%, 85%);
+    padding-left: 10px;
+}
+.container::-webkit-scrollbar-thumb{
+    background-color: hsl(238, 40%, 52%);
+}
+.comments{
+    display: flex;
+    justify-content: space-between;
+    background-color: hsl(0, 0%, 100%);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 2%;
+    transition: .3s all ease;
+}
+.vote{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 32px;
+    height: 80px;
+    padding: 5px;
+    background-color: hsl(252, 33%, 97%);
+    margin-right: 20px;
+    border-radius: 5px;
+}
+.vote span{
+    font-size: 16px;
+    color: hsl(238, 40%, 52%);
+    font-weight: 600;
+}
+.vote span::selection{
+    user-select: all;
+}
+.score{
+    cursor: pointer;
+}
+.comment{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.comment-header{
+    display: flex;
+    column-gap: 15px;
+    margin-bottom: 10px;
+}
+.comment-user-pic{
+    width: 30px;
+    height: 30px;
+}
+.comment-username{
+    font-size: 16px;
+    font-weight: 500;
+    color: hsl(211, 10%, 45%);
+    margin-top: 5px;
+}
+.comment-created-at{
+    font-size: 16px;
+    font-weight: 400;
+    color: hsl(211, 10%, 45%);
+    margin-top: 5px;
+}
+.reply-section, .edit-delete-section{
+    display: flex;
+    margin-left: auto;
+    margin-top: 2px;
+}
+.edit-delete-section{
+    column-gap: 15px;
+}
+.reply-section span, .reply-section p{
+    font-size: 14px;
+    color: hsl(238, 40%, 52%);
+    font-weight: 500;
+    transition: .3s all ease;
+}
+.reply-section:hover span, .reply-section:hover p{
+    cursor: pointer;
+    color: hsl(239, 57%, 85%);
+}
+.delete, .edit{
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    transition: .3s all ease;
+}
+.delete span, .edit span{
+    font-size: 15px;
+}
+.delete{
+    color: hsl(358, 79%, 66%);
+}
+.edit{
+    color: hsl(238, 40%, 52%);
+}
+.edit:hover{
+    cursor: pointer;
+    color: hsl(239, 57%, 85%);
+}
+.delete:hover{
+    cursor: pointer;
+    color: hsl(357, 100%, 86%);
+}
+.comment-body{
+    font-size: 16px;
+    font-weight: 400;
+    color: hsl(211, 10%, 45%);
+}
+.comments-child{
+    width: 90%;
+    margin-left: 10%;
+    margin-top: 2%;
+    position: relative;
+}
+.comments-child::before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 2px;
+    background-color: hsl(223, 19%, 93%);
+    top: 0;
+    left: -5%;
+}
+form{
+    margin: 10px 300px;
+}
+.form{
+    display: flex;
+    align-items: flex-start;
+    column-gap: 10px;
+    padding: 20px;
+    background-color: hsl(0, 0%, 100%);
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.form img{
+    width: 40px;
+    height: 40px;
+}
+.form textarea{
+    width: 100%;
+    outline: none;
+    border: 2px solid hsl(228, 33%, 97%);
+    padding: 5px 10px;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    height: 80px;
+    resize: none;
+    border-radius: 5px;
+}
+.form textarea:focus{
+    border: 2px solid hsl(223, 19%, 93%);
+}
+.form input{
+    margin-left: auto;
+    width: 110px;
+    height: 40px;
+    outline: none;
+    border: none;
+    background-color: hsl(238, 40%, 52%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: .3s all ease;
+}
+.form input:hover{
+    background-color: hsl(239, 57%, 85%);
+    cursor: pointer;
+}
+.reply-comment{
+    margin: 10px 0px;
+}
+@media screen and (max-width:400px) {
+    .container{
+        margin: 15px;
+    }
+    .comments{
+        flex-direction: column-reverse;
+        position: relative;
+    }
+    .comments-child{
+        width: 95%;
+        margin-left: 5%;
+    }
+    .reply-section, .edit-delete-section{
+        position: absolute;
+        bottom: -26%;
+        right: 0;
+    }
+    .vote{
+        flex-direction: row;
+        height: auto;
+        width: 80px;
+        margin-right: 0;
+        margin-top: 10px;
+    }
+    form{
+        margin: 15px;
+    }
+}
