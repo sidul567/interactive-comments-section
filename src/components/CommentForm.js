@@ -18,7 +18,7 @@ function CommentForm({
 
   return (<form action="#" onSubmit={onSubmit} className={replyClass}>
     <div className="form">
-      <img src="../images/avatars/image-juliusomo.png" alt="" />
+      <img src="/interactive-comments-section/images/avatars/image-juliusomo.png" alt="" />
       <textarea name="textarea" id="" cols="30" rows="5" value={text} placeholder="Add a comment..." onChange={(e)=>setText(e.target.value)}></textarea>
       <input type="submit" value={submitLabel} disabled={text==""} />
       {handleCancelButton && <input type="button" onClick={handleCancel} value="Cancel" />}

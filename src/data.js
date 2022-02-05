@@ -7,7 +7,7 @@ export async function getComments() {
       "score": 12,
       "user": {
         "image": {
-          "png": "../images/avatars/image-amyrobson.png",
+          "png": "/interactive-comments-section/images/avatars/image-amyrobson.png",
           "webp": "../images/avatars/image-amyrobson.webp"
         },
         "username": "amyrobson"
@@ -22,7 +22,7 @@ export async function getComments() {
       "score": 5,
       "user": {
         "image": {
-          "png": "../images/avatars/image-maxblagun.png",
+          "png": "/interactive-comments-section/images/avatars/image-maxblagun.png",
           "webp": "../images/avatars/image-maxblagun.webp"
         },
         "username": "maxblagun"
@@ -38,7 +38,7 @@ export async function getComments() {
       "replyingTo": "maxblagun",
       "user": {
         "image": {
-          "png": "../images/avatars/image-ramsesmiron.png",
+          "png": "/interactive-comments-section/images/avatars/image-ramsesmiron.png",
           "webp": "../images/avatars/image-ramsesmiron.webp"
         },
         "username": "ramsesmiron"
@@ -54,7 +54,7 @@ export async function getComments() {
       "replyingTo": "ramsesmiron",
       "user": {
         "image": {
-          "png": "../images/avatars/image-juliusomo.png",
+          "png": "/interactive-comments-section/images/avatars/image-juliusomo.png",
           "webp": "../images/avatars/image-juliusomo.webp"
         },
         "username": "juliusomo",
@@ -74,7 +74,7 @@ export async function createComment(text, parentID = null) {
     "replyingTo": "ramsesmiron",
     "user": {
       "image": {
-        "png": "../images/avatars/image-juliusomo.png",
+        "png": "/interactive-comments-section/images/avatars/image-juliusomo.png",
         "webp": "../images/avatars/image-juliusomo.webp"
       },
       "username": "juliusomo",
